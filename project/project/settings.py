@@ -17,7 +17,6 @@ import environ
 BASE_DIR = Path(__file__).resolve().parent.parent
 env=environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR,'.env'))
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -79,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_admin',
-        'USER':env("DB_USERNAME"),
-        'PASSWORD':env("DB_PASSWORD"),
+        'USER': env("DB_USERNAME"),
+        'PASSWORD': env("DB_PASSWORD"),
         'HOST':'localhost',
         'PORT':'3306'
     }
