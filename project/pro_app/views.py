@@ -5,6 +5,8 @@ from .serlizer import Empserlizer
 import json
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
+def welcome(req):
+    return HttpResponse("hi hello")
 
 def valid_file(pic):
     max=5*1024*1024
